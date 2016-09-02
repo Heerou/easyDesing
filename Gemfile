@@ -49,4 +49,7 @@ group :development do
 
   #devise
   gem 'devise', '~> 4.2'
+
+  #agrega font-awesome-rails
+  gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
 end
