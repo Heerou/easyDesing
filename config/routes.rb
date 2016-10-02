@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :usuarios
+
+#Here i set the controller to make if the petition is valid wil do the lgin with facebook
+  devise_for :usuarios, controllers: {omniauth_callbacks: "omniauth_callbacks"}
   #en rails 4 se colocan asi las acciones, lo que haces es enviarte diretamente al index del welcome:
   #app/welcome/index
   get 'welcome/index'

@@ -52,4 +52,10 @@ group :development do
 
   #agrega font-awesome-rails
   gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
+
+  #Omniauth, facebook authentification
+  gem 'omniauth', '~> 1.3', '>= 1.3.1'
+  #Middleware de facebook
+  gem 'omniauth-facebook'
+
 end

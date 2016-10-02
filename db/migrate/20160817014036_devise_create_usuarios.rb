@@ -31,7 +31,7 @@ class DeviseCreateUsuarios < ActiveRecord::Migration
       # t.datetime :locked_at
 
       #Informacion Extra
-      t.string :usermane
+      t.string :username
       t.string :nombre
       t.string :apellido
 
