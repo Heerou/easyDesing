@@ -5,6 +5,15 @@ class Usuario < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   devise :omniauthable, omniauth_providers: [:facebook]
 
+#Validation of the username
+validates :username, presence: true, uniqueness: true,
+        length: { in: 5..20,
+                  too_short: "Tiene que tener 5 caracteres como minimo",
+                  too_long: "Máximo 20 caracteres "},
+#Regular Expresion for the username
+            format: { with: /([A-Za-z0-9\-\_]+)/,
+              message: "El username solo puede tener letras, numeros y guiones." }
+
 #Mehtod to validate if the user has logged with facebook
   def self.find_or_created_by_omniauth(auth)
     #Find if a user has logged with facebook
