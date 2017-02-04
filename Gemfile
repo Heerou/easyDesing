@@ -58,4 +58,7 @@ group :development do
   #Middleware de facebook
   gem 'omniauth-facebook'
 
+  #gem 'tzinfo-data', '~> 1.2016', '>= 1.2016.10'
+  gem 'tzinfo-data', '~> 1.2016', '>= 1.2016.10'
+
 end
